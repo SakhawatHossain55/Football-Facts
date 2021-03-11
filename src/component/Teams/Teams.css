@@ -1,6 +1,7 @@
 .card-style img{
     max-width:100%;
     max-height: 150px;
+    margin-bottom: 20px;
 }
 .card-style{
     background-color:#fff;

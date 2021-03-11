@@ -6,8 +6,8 @@ import {
   faMarsStrokeV,
 } from "@fortawesome/free-solid-svg-icons";
 import {
-  faFacebook,
-  faInstagram,
+  faFacebookF,
+  faTwitter,
   faYoutube,
 } from "@fortawesome/free-brands-svg-icons";
 import React, { useEffect, useState } from "react";
@@ -27,26 +27,30 @@ const TeamDetail = () => {
         console.log(data.teams[0]);
         setTeam(data.teams[0]);
       });
-  }, []);
+  }, [idTeam]);
   const {
+    strTeamBadge,
     strTeamBanner,
     strDescriptionEN,
     strGender,
-    strTeamFanart3,
     strTeam,
     intFormedYear,
     strCountry,
     strSport,
+    strFacebook,
+    strYoutube,
+    strTwitter,
   } = team;
   return (
     <div className="detail-style">
-      <div className="container main-style">
-        <div className="my-4">
-          <img src={strTeamBanner} alt="" />
+      <div className="py-5">
+      <div className="py-4 text-center detail-banner" style={{backgroundImage: `url(${strTeamBanner})`}}>
+          <img src={strTeamBadge} alt="" />
         </div>
+      <div className="container py-4 main-style">
         <div className="main-section-style">
           <div className="row">
-            <div className="col-md-7 p-4">
+            <div className="col-md-7 p-5">
               <h3>{strTeam}</h3>
               <p><FontAwesomeIcon icon={faClock} /> Founded : {intFormedYear}</p>
               <p>
@@ -60,7 +64,6 @@ const TeamDetail = () => {
               </p>
             </div>
             <div className="detail-img-style p-4 col-md-5">
-              {/* <img src={} alt="" /> */}
               {<img src={strGender == "Female" ? female : male} />}
             </div>
           </div>
@@ -68,17 +71,18 @@ const TeamDetail = () => {
         <div className="pt-5">
           <p>{strDescriptionEN}</p>
         </div>
-        <div className="text-center icon-style">
-          <a className="facebook" href="">
-            <FontAwesomeIcon icon={faFacebook} />
+        <div className="d-flex justify-content-center mt-5 icon-style">
+          <a target="_bank" className="facebook" href={'https://' + strFacebook}>
+            <FontAwesomeIcon icon={faFacebookF} />
           </a>
-          <a className="youtube" href="">
+          <a target="_bank"  className="faYoutube" href={'https://' + strYoutube}>
             <FontAwesomeIcon icon={faYoutube} />
           </a>
-          <a className="instagram" href="">
-            <FontAwesomeIcon icon={faInstagram} />
+          <a target="_bank"  className="faTwitter" href={'https://www.' + strTwitter}>
+            <FontAwesomeIcon icon={faTwitter} />
           </a>
         </div>
+      </div>
       </div>
     </div>
   );

@@ -10,12 +10,12 @@ const Teams = (props) => {
   const { idTeam, strTeam, strTeamBadge, strSport } = props.team;
   return (
     <div className="col-lg-4 col-md-6">
-      <div className="card-style border text-center my-2 py-3 rounded">
+      <div className="card-style border text-center mb-3 py-3 rounded">
         <img src={strTeamBadge} alt="" />
         <h3 className="title-style">{strTeam}</h3>
         <p>Spots Type : {strSport}</p>
         <Link to={`/team/${idTeam}`}>
-          <Button variant="primary">Explore <FontAwesomeIcon icon={faArrowRight} /></Button>
+          <Button variant="warning">Explore <FontAwesomeIcon icon={faArrowRight} /></Button>
         </Link>
       </div>
     </div>

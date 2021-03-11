@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Teams from "../Teams/Teams";
 import Banner from "../Bunner/Banner";
+import './Home.css'
 
 const Home = () => {
   const [team, setTeam] = useState([]);
@@ -16,7 +17,7 @@ const Home = () => {
   return (
     <>
     <Banner />
-    <div style={{ background: '#31D2F2', paddingTop: '30px'}}>
+    <div className="main-background">
     <div className="container">
       <div className="row">
         {team.map((team) => (
