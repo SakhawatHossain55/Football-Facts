@@ -64,7 +64,7 @@ const TeamDetail = () => {
               </p>
             </div>
             <div className="detail-img-style p-4 col-md-5">
-              {<img src={strGender === "Female" ? female : male} />}
+              {<img src={strGender === "Female" ? female : male} alt="picture" />}
             </div>
           </div>
         </div>
