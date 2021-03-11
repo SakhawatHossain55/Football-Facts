@@ -1,6 +1,6 @@
 import "./App.css";
 import Home from "./component/Home/Home";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import NoMatch from "./component/NoMatch/NoMatch";
 import TeamDetail from "./component/TeamDetail/TeamDetail";
 import 'bootstrap/dist/css/bootstrap.min.css';
