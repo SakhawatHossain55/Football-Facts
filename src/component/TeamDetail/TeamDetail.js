@@ -15,6 +15,7 @@ import { useParams } from "react-router";
 import male from "../../images/male.png";
 import female from "../../images/female.png";
 import "./TeamDetail.css";
+import { Col, Container, Row } from "react-bootstrap";
 
 const TeamDetail = () => {
   const { idTeam } = useParams();
@@ -24,7 +25,6 @@ const TeamDetail = () => {
     fetch(url)
       .then((res) => res.json())
       .then((data) => {
-        console.log(data.teams[0]);
         setTeam(data.teams[0]);
       });
   }, [idTeam]);
@@ -43,14 +43,20 @@ const TeamDetail = () => {
   } = team;
   return (
     <div className="detail-style">
-      <div className="py-5">
-      <div className="py-4 text-center detail-banner" style={{backgroundImage: `url(${strTeamBanner})`}}>
-          <img src={strTeamBadge} alt="" />
+      <div className="">
+      <div className="text-center detail-banner" style={{backgroundImage: `url(${strTeamBanner})`}}>
+          <Container>
+            <Row>
+              <Col>
+              <img  src={strTeamBadge} alt="" />
+              </Col>
+            </Row>
+          </Container>
         </div>
       <div className="container py-4 main-style">
         <div className="main-section-style">
           <div className="row">
-            <div className="col-md-7 p-5">
+            <div className="col-md-7">
               <h3>{strTeam}</h3>
               <p><FontAwesomeIcon icon={faClock} /> Founded : {intFormedYear}</p>
               <p>
@@ -63,7 +69,7 @@ const TeamDetail = () => {
                 <FontAwesomeIcon icon={faMarsStrokeV} /> Gender : {strGender}
               </p>
             </div>
-            <div className="detail-img-style p-4 col-md-5">
+            <div className="detail-img-style col-md-5">
               {<img src={strGender === "Female" ? female : male} alt={strTeam} />}
             </div>
           </div>

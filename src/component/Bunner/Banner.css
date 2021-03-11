@@ -2,6 +2,7 @@
     padding: 150px 0 145px 0;
     background-image: url(../../images/banner.jpg);
     background-repeat: no-repeat;
+    background-size: cover;
 }
 .text-style{
     font-size: 48px;

@@ -6,7 +6,6 @@ import { faArrowRight } from '@fortawesome/free-solid-svg-icons'
 import "./Teams.css";
 
 const Teams = (props) => {
-//   console.log(props.team);
   const { idTeam, strTeam, strTeamBadge, strSport } = props.team;
   return (
     <div className="col-lg-4 col-md-6">
