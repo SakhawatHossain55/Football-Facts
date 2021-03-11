@@ -1,0 +1,10 @@
+.banner-style{
+    padding: 150px 0 150px 0;
+    background-image: url(../../images/banner.jpg);
+    background-repeat: no-repeat;
+}
+.text-style{
+    font-size: 48px;
+    font-weight: 600;
+    color: #fff;
+}
